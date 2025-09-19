@@ -1,0 +1,235 @@
+/* Estilos para centralizar o conteúdo na página */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2em 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  /* --- LINHAS ADICIONADAS --- */
+  width: 90%; /* Mantém o formulário responsivo em telas menores */
+  max-width: 400px; /* AUMENTE ESTE VALOR PARA O TAMANHO DESEJADO */
+}
+
+.form:hover {
+  transform: scale(1.05);
+  border: 1px solid #333;
+}
+
+.logo-inside-form {
+  max-width: 180px;
+  display: block;
+  margin: 0 auto 2.5em auto;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -5em;
+  border-radius: 25px;
+  padding: 0.6em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 5em;
+  fill: white;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+
+
+/* Estilo do botão principal (Acessar) */
+.button1 {
+  padding: 0.8em; /* Ajustado o padding */
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #333; /* Cor azul da logo para destaque */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2.5em; /* Espaçamento acima do botão */
+  width: 100%; /* Botão ocupa toda a largura */
+}
+
+.button1:hover {
+  background-color: #00529B; /* Cor mais escura no hover */
+}
+
+/* Novo container para os links secundários */
+.secondary-actions {
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens à direita */
+  gap: 1em; /* Espaço entre os links */
+  margin-top: 1em; /* Espaço abaixo do botão Acessar */
+}
+
+.secondary-actions a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.secondary-actions a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Estilos para os links extras abaixo do formulário */
+.extra-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.extra-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.extra-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* =============================================== */
+/* ESTILOS PARA O BOTÃO WHATSAPP E ÁREA DE SUPORTE */
+/* =============================================== */
+
+/* Ajustes na área de links extras */
+.extra-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Aumenta o espaço entre os itens */
+}
+
+/* Novo container para o texto "Precisa de ajuda?" e o botão */
+.support-container {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Espaço entre o texto e o botão */
+    color: #888;
+    font-size: 1.1em;
+}
+
+/* Estilo para o link único de diploma */
+.extra-link-single {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.extra-link-single:hover {
+    color: white;
+}
+
+
+/* Remove o sublinhado do link do botão */
+.whatsapp-link {
+    text-decoration: none;
+}
+
+/* Estilos do botão WhatsApp */
+.button-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #ffffff;
+    padding: 0.7em 1em;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    border-radius: 0.5em;
+    background: #333;
+    border: 1px solid #333;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.whatsapp-icon {
+    height: 1.3em;
+    width: 1.3em;
+}
+
+.button-whatsapp:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button-whatsapp:before, .button-whatsapp:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    display: block;
+    z-index: -1;
+    border-radius: 50%;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.button-whatsapp:before {
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.button-whatsapp:after {
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+}
+
+.button-whatsapp:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+}
+
+.button-whatsapp:hover:before {
+    top: -35%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button-whatsapp:hover:after {
+    top: -45%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}

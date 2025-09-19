@@ -1,0 +1,8 @@
+<svg width="200" height="50" viewBox="2 0 150 50" xmlns="http://www.w3.org/2000/svg">
+    <text x="15" y="38" font-family="Verdana, sans-serif" font-size="34" font-weight="bold">
+        <tspan fill="#333">R</tspan>
+        <tspan dx="-5" fill="#00529B">▲</tspan>
+        <tspan dx="-4" fill="#333">G</tspan>
+        <tspan dx="-4" fill="#333">I</tspan>
+    </text>
+</svg>

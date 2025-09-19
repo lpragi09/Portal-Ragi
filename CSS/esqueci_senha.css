@@ -1,0 +1,198 @@
+/* =============================================== */
+/* ESTILOS GERAIS E GLOBAIS                      */
+/* =============================================== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2em 0;
+}
+
+.form {
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+  width: 90%;
+  max-width: 500px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 25px;
+  padding: 0.8em;
+  background-color: #171717;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #888;
+}
+
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+  font-size: 1em;
+}
+
+/* =============================================== */
+/* ESTILOS DA PÁGINA "PRIMEIRO ACESSO"           */
+/* =============================================== */
+
+/* Estilo do Passo a Passo (Stepper) */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.5em;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #555;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  border: 2px solid #555;
+}
+
+.step-label {
+  font-size: 0.8em;
+  color: #888;
+}
+
+.step.active .step-number {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.step.active .step-label {
+  color: white;
+  font-weight: bold;
+}
+
+.stepper .step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #555;
+}
+
+/* Mensagem de boas-vindas */
+.welcome-message {
+  color: #d3d3d3;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+}
+
+/* Container dos botões "Voltar" e "Continuar" */
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+/* Botão primário (Continuar) */
+.button-primary {
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: .4s ease-in-out;
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #003366;
+}
+
+/* Botão secundário (Voltar) */
+.button-secondary {
+  color: #888;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.button-secondary:hover {
+  color: white;
+}
+
+/* ======================================================== */
+/* CORREÇÃO PARA O ESPAÇAMENTO DAS ETAPAS (Multi-step)      */
+/* ======================================================== */
+
+.form-steps-container {
+  position: relative;
+  transition: height 0.4s ease-in-out; /* Anima a mudança de altura */
+}
+
+.form-step {
+  /* Organiza os itens da etapa em coluna */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  /* Sobrepõe as etapas uma na outra */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  /* Deixa a etapa invisível, mas pronta para a transição */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s;
+}
+
+.form-step.active {
+  /* Torna a etapa ativa visível, mas ainda sobreposta */
+  opacity: 1;
+  visibility: visible;
+  position: relative; /* Tira do fluxo 'absolute' para que sua altura seja calculada */
+}
+
+.full-width-btn {
+  width: 100%;
+  text-align: center;
+  padding: 0.8em;
+  text-decoration: none;
+}

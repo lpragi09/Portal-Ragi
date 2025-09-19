@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueci Senha - Portal RAGI</title>
+    <link rel="stylesheet" href="CSS\esqueci_senha.css">
+</head>
+<body>
+
+    <form class="form">
+        <div class="stepper">
+            <div class="step active" data-step="1">
+                <div class="step-number">1</div>
+                <div class="step-label">Identificação</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">
+                <div class="step-number">2</div>
+                <div class="step-label">Verificação</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">
+                <div class="step-number">3</div>
+                <div class="step-label">Senha</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="4">
+                <div class="step-number">4</div>
+                <div class="step-label">Fim</div>
+            </div>
+        </div>
+
+        <div class="form-steps-container">
+
+            <div class="form-step active" id="step-1">
+                <p class="welcome-message">Olá, precisamos da confirmação de alguns dados para prosseguir.</p>
+                <div class="field">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/></svg>
+                    <input autocomplete="off" placeholder="E-mail" class="input-field" type="email">
+                </div>
+                <div class="field">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/></svg>
+                    <input autocomplete="off" placeholder="CPF" class="input-field" type="text">
+                </div>
+                <div class="field">
+                    <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM-5 3h10v2H-5V3z"/></svg>
+                    <input autocomplete="off" placeholder="Data de nascimento" class="input-field" type="text" onfocus="(this.type='date')" onblur="(this.type='text')">
+                </div>
+                <div class="form-buttons">
+                    <a href="portal.html" class="button-secondary">&larr; Voltar para Login</a>
+                    <button type="button" class="button-primary next-btn">Continuar</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step-2">
+                <p class="welcome-message">Enviamos um código para seu e-mail.<br/>Por favor, insira-o abaixo.</p>
+                <div class="field">
+                    <input autocomplete="off" placeholder="Código de verificação" class="input-field" type="text">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="button-secondary prev-btn">Voltar</button>
+                    <button type="button" class="button-primary next-btn">Continuar</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step-3">
+                <p class="welcome-message">Ótimo! Agora crie sua Nova senha.</p>
+                <div class="field">
+                    <input autocomplete="off" placeholder="Nova Senha" class="input-field" type="password">
+                </div>
+                <div class="field">
+                    <input autocomplete="off" placeholder="Repetir Nova Senha" class="input-field" type="password">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="button-secondary prev-btn">Voltar</button>
+                    <button type="button" class="button-primary next-btn">Continuar</button>
+                </div>
+            </div>
+
+            <div class="form-step" id="step-4">
+                <p class="welcome-message">Sua Nova senha foi criada com sucesso!</p>
+                <a href="portal.html" class="button-primary full-width-btn">Voltar para o Login</a>
+            </div>
+
+        </div> </form>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
